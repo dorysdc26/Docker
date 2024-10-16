@@ -1,7 +1,7 @@
 # Usa una imagen base de Python
 FROM python:3.9-slim
 
-# Establece el directorio de trabajo
+# Establece el directorio de trabajo para workdir
 WORKDIR /app
 
 # Copia el archivo de requerimientos y el script de la aplicación
