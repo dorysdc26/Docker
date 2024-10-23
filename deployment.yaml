@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doris-prueba-deployment
+spec:
+  replicas: 2  # Número de réplicas
+  selector:
+    matchLabels:
+      app: doris-prueba
+  template:
+    metadata:
+      labels:
+        app: doris-prueba
+    spec:
+      containers:
+      - name: doris-prueba-container
+        image: diegosys/dockerrepository  # Reemplaza con el nombre de tu imagen
+        ports:
+        - containerPort: 5000  # Puerto expuesto por el contenedor
